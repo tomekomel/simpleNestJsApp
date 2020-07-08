@@ -1,5 +1,7 @@
 FROM node:10
 
+RUN npm install -g nodemon
+
 ENV AP /data/app
 
 RUN apt-get -y update
@@ -19,4 +21,4 @@ USER node
 
 EXPOSE 8080
 
-CMD ["npm", "run", "start"]
+CMD ["nodemon"]
